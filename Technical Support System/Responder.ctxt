@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Responder
+comment0.text=\r\n\ Responder.java\r\n\ Versi\ ringkas\ dengan\ 7\ keyword\ utama.\r\n
+comment1.params=
+comment1.target=Responder()
+comment2.params=
+comment2.target=void\ fillResponses()
+comment2.text=\r\n\ Tambahkan\ daftar\ keyword\ penting\ dan\ responnya.\r\n
+comment3.params=input
+comment3.target=java.lang.String\ generateResponse(java.lang.String)
+comment3.text=\r\n\ Menghasilkan\ respon\ berdasarkan\ input\ pengguna.\r\n
+numComments=4

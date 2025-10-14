@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Transaction
+comment1.params=productName\ amountPaid
+comment1.target=Transaction(java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getProductName()
+comment3.params=
+comment3.target=int\ getAmountPaid()
+comment4.params=
+comment4.target=java.time.LocalDateTime\ getDate()
+comment5.params=
+comment5.target=java.lang.String\ formatTransaction()
+comment6.params=
+comment6.target=void\ printTransaction()
+numComments=7

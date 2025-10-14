@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=SnackMachine
+comment1.params=
+comment1.target=SnackMachine()
+comment2.params=
+comment2.target=void\ loadProducts()
+comment3.params=
+comment3.target=void\ saveProducts()
+comment4.params=
+comment4.target=void\ displayMenu()
+comment5.params=
+comment5.target=void\ start()
+comment6.params=scanner
+comment6.target=void\ adminMenu(java.util.Scanner)
+comment7.params=scanner
+comment7.target=void\ refillProduct(java.util.Scanner)
+comment8.params=
+comment8.target=void\ showProducts()
+comment9.params=
+comment9.target=void\ showSummary()
+numComments=10

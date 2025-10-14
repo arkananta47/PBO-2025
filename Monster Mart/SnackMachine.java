@@ -21,20 +21,18 @@ public class SnackMachine {
         transactions = new ArrayList<>();
         logger = new Logger("transactions.log");
 
-        loadProducts(); // Load data produk dari file saat mesin menyala
+        loadProducts(); 
     }
 
-    // --- Membaca data stok dari file ---
     private void loadProducts() {
         File file = new File(PRODUCT_FILE);
         if (!file.exists()) {
-            // jika file belum ada, buat produk default
             System.out.println("File produk belum ditemukan. Membuat data default...");
             products.add(new Product("Chips", 10000, 5));
             products.add(new Product("Coklat", 12000, 5));
             products.add(new Product("Soda", 8000, 5));
             products.add(new Product("Air Mineral", 5000, 5));
-            saveProducts(); // langsung simpan file baru
+            saveProducts(); 
             return;
         }
 
@@ -54,7 +52,6 @@ public class SnackMachine {
         }
     }
 
-    // --- Menyimpan stok terbaru ke file ---
     private void saveProducts() {
         try (PrintWriter writer = new PrintWriter(new FileWriter(PRODUCT_FILE))) {
             for (Product p : products) {
@@ -124,7 +121,7 @@ public class SnackMachine {
             if (payment >= selected.getPrice()) {
                 int change = payment - selected.getPrice();
                 selected.dispense();
-                saveProducts(); // simpan stok setelah pembelian
+                saveProducts(); 
 
                 Transaction t = new Transaction(selected.getName(), payment);
                 transactions.add(t);
@@ -152,7 +149,6 @@ public class SnackMachine {
             return;
         }
 
-        // Cek stok kosong
         boolean lowStock = false;
         for (Product p : products) {
             if (p.getStock() == 0) {
@@ -179,7 +175,7 @@ public class SnackMachine {
                 case 2 -> showProducts();
                 case 3 -> System.out.println("Total transaksi: " + transactions.size());
                 case 0 -> {
-                    saveProducts(); // pastikan stok tersimpan
+                    saveProducts();
                     return;
                 }
                 default -> System.out.println("Pilihan tidak valid!");
@@ -201,7 +197,7 @@ public class SnackMachine {
         int amount = scanner.nextInt();
 
         products.get(index).refill(amount);
-        saveProducts(); // simpan stok setelah refill
+        saveProducts();
         System.out.println("Stok berhasil ditambah!");
 
         logger.log("[ADMIN] Refill " + products.get(index).getName() + " sebanyak " + amount);

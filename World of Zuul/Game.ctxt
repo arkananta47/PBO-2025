@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Game
+comment0.text=\r\n\ Main\ class\ of\ the\ "World\ of\ Zuul"\ application.\r\n\ Very\ simple\ text-based\ adventure\ game.\r\n
+comment1.params=
+comment1.target=Game()
+comment2.params=
+comment2.target=void\ createRooms()
+comment3.params=
+comment3.target=void\ play()
+comment4.params=
+comment4.target=void\ printWelcome()
+comment5.params=command
+comment5.target=boolean\ processCommand(Command)
+comment6.params=
+comment6.target=void\ printHelp()
+comment7.params=command
+comment7.target=void\ goRoom(Command)
+comment8.params=command
+comment8.target=boolean\ quit(Command)
+comment9.params=args
+comment9.target=void\ main(java.lang.String[])
+numComments=10

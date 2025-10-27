@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Command
+comment0.text=\r\n\ This\ class\ holds\ information\ about\ a\ command\ that\ was\ issued\ by\ the\ user.\r\n\ A\ command\ currently\ consists\ of\ two\ strings\:\ a\ command\ word\ and\ a\ second\ word.\r\n\ (for\ example,\ if\ the\ command\ was\ "take\ map",\ then\ the\ two\ strings\ are\ "take"\ and\ "map").\r\n\ If\ the\ user\ entered\ an\ invalid\ command\ (a\ word\ that\ is\ not\ known)\ then\ the\ command\ word\ is\ <null>.\r\n\ If\ the\ command\ had\ only\ one\ word,\ then\ the\ second\ word\ is\ <null>.\r\n\r\n\ @author\ Michael\ Kolling\ and\ David\ J.\ Barnes\r\n\ @version\ 1.0\ (February\ 2002)\r\n
+comment1.params=firstWord\ secondWord
+comment1.target=Command(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getCommandWord()
+comment3.params=
+comment3.target=java.lang.String\ getSecondWord()
+comment4.params=
+comment4.target=boolean\ isUnknown()
+comment5.params=
+comment5.target=boolean\ hasSecondWord()
+numComments=6

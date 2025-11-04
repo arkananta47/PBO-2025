@@ -52,22 +52,22 @@ public class SalesItemTest
     @Test
     public void testAddComment()
     {
-        SalesItem salesIte1 = new SalesItem("Cool item1", 10199);
-        assertEquals(true, salesIte1.addComment("Bintang", "Cool cool", 5));
+        SalesItem salesIte1 = new SalesItem("Lele Goreng", 20000);
+        assertEquals(true, salesIte1.addComment("Aqil", "wuenak", 5));
     }
 
     @Test
     public void testIllegalRating()
     {
-        SalesItem salesIte1 = new SalesItem("Cool Item1", 10199);
-        assertEquals(false, salesIte1.addComment("Illegal", "Bruh, this item sucks", 0));
+        SalesItem salesIte1 = new SalesItem("Lele Goreng", 20000);
+        assertEquals(false, salesIte1.addComment("Aqil", "This food is bad", 0));
     }
 
     @Test
     public void testDuplicateAuthor()
     {
-        SalesItem salesIte1 = new SalesItem("Cool Item 1", 10199);
-        assertEquals(true, salesIte1.addComment("Bintang", "Hmm aku belum coba", 4));
-        assertEquals(false, salesIte1.addComment("Bintang", "Meh, biasa aja", 2));
+        SalesItem salesIte1 = new SalesItem("Lele Goreng", 20000);
+        assertEquals(true, salesIte1.addComment("Aqil", "Food is good", 5));
+        assertEquals(false, salesIte1.addComment("Aqil", "Average", 3));
     }
 }

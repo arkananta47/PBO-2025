@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Kendaraan
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ kendaraan\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=merk\ model\ tahunProduksi\ stok\ hargaSewa
+comment1.target=Kendaraan(java.lang.String,\ java.lang.String,\ int,\ int,\ double)
+comment2.params=
+comment2.target=boolean\ tersedia()
+comment3.params=
+comment3.target=void\ sewa()
+comment4.params=
+comment4.target=void\ kembalikan()
+comment5.params=
+comment5.target=double\ getHargaSewa()
+comment6.params=
+comment6.target=void\ info()
+numComments=7

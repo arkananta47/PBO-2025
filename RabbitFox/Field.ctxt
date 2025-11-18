@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Field
+comment1.params=depth\ width
+comment1.target=Field(int,\ int)
+comment2.params=
+comment2.target=int\ getDepth()
+comment3.params=
+comment3.target=int\ getWidth()
+comment4.params=
+comment4.target=void\ print2d()
+numComments=5

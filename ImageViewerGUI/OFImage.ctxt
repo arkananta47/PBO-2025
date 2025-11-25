@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=OFImage
+comment0.text=\r\n\ OFImage\ is\ a\ class\ that\ defines\ an\ image\ in\ OF\ (Objects\ First)\ format,\r\n\ extending\ BufferedImage\ to\ add\ simple\ filters.\r\n\r\n\ @author\ Michael\ Kolling\ and\ David\ J.\ Barnes\r\n\ @version\ 1.1\r\n
+comment1.params=image
+comment1.target=OFImage(java.awt.image.BufferedImage)
+comment1.text=\r\n\ Create\ an\ OFImage\ copied\ from\ a\ BufferedImage.\r\n\ @param\ image\ The\ image\ to\ copy.\r\n
+comment2.params=width\ height
+comment2.target=OFImage(int,\ int)
+comment2.text=\r\n\ Create\ an\ OFImage\ with\ specified\ size\ and\ unspecified\ content.\r\n\ @param\ width\ The\ width\ of\ the\ image.\r\n\ @param\ height\ The\ height\ of\ the\ image.\r\n
+comment3.params=x\ y\ col
+comment3.target=void\ setPixel(int,\ int,\ java.awt.Color)
+comment3.text=\r\n\ Set\ a\ given\ pixel\ of\ this\ image\ to\ a\ specified\ color.\r\n\ @param\ x\ The\ x\ position\ of\ the\ pixel.\r\n\ @param\ y\ The\ y\ position\ of\ the\ pixel.\r\n\ @param\ col\ The\ color\ of\ the\ pixel.\r\n
+comment4.params=x\ y
+comment4.target=java.awt.Color\ getPixel(int,\ int)
+comment4.text=\r\n\ Get\ the\ color\ value\ at\ a\ specified\ pixel\ position.\r\n\ @param\ x\ The\ x\ position\ of\ the\ pixel.\r\n\ @param\ y\ The\ y\ position\ of\ the\ pixel.\r\n\ @return\ The\ color\ of\ the\ pixel\ at\ the\ given\ position.\r\n
+comment5.params=
+comment5.target=void\ darker()
+comment5.text=\r\n\ Make\ this\ image\ a\ bit\ darker.\r\n
+comment6.params=
+comment6.target=void\ lighter()
+comment6.text=\r\n\ Make\ this\ image\ a\ bit\ lighter.\r\n
+comment7.params=
+comment7.target=void\ threshold()
+comment7.text=\r\n\ Perform\ a\ three\ level\ threshold\ operation\ (black,\ gray,\ white).\r\n
+numComments=8

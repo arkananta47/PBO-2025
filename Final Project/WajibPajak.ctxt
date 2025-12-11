@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=WajibPajak
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ WajibPajak\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=npwp\ nama\ penghasilan\ pajak\ status
+comment1.target=WajibPajak(java.lang.String,\ java.lang.String,\ double,\ double,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNpwp()
+comment3.params=
+comment3.target=java.lang.String\ getNama()
+comment4.params=
+comment4.target=double\ getPenghasilan()
+comment5.params=
+comment5.target=double\ getPajak()
+comment6.params=
+comment6.target=java.lang.String\ getStatus()
+numComments=7

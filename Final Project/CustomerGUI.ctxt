@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CustomerGUI
+comment1.params=username
+comment1.target=CustomerGUI(java.lang.String)
+comment2.params=npwp\ output
+comment2.target=void\ cariDataPajak(java.lang.String,\ javax.swing.JTextArea)
+numComments=3

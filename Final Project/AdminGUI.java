@@ -15,7 +15,7 @@ import java.util.List;
 
 public class AdminGUI extends JFrame {
     private JTextField txtNpwp, txtNama, txtPenghasilan;
-    private JComboBox<String> cmbStatus; 
+    private JComboBox<String> cmbStatus;
     private JTable table;
     private DefaultTableModel tableModel;
     private TaxService service;
@@ -24,7 +24,7 @@ public class AdminGUI extends JFrame {
         service = new TaxService();
 
         setTitle("Coretax System - Admin Panel");
-        setSize(900, 600);
+        setSize(950, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
@@ -49,13 +49,16 @@ public class AdminGUI extends JFrame {
         cmbStatus = new JComboBox<>(opsiStatus);
         panelInput.add(cmbStatus);
 
-        JPanel panelTombol = new JPanel(new GridLayout(1, 3, 5, 5));
+        JPanel panelTombol = new JPanel(new GridLayout(1, 4, 5, 5));
+        
         JButton btnSimpan = new JButton("Simpan Baru");
         JButton btnUpdate = new JButton("Update Data");
+        JButton btnHapus = new JButton("Hapus");
         JButton btnClear = new JButton("Bersihkan");
         
         panelTombol.add(btnSimpan);
         panelTombol.add(btnUpdate);
+        panelTombol.add(btnHapus);
         panelTombol.add(btnClear);
 
         panelInput.add(new JLabel("Aksi:"));
@@ -81,6 +84,7 @@ public class AdminGUI extends JFrame {
                 
                 String penghasilanStr = tableModel.getValueAt(row, 2).toString();
                 txtPenghasilan.setText(penghasilanStr.replaceAll("[^0-9]", ""));
+                
                 String status = tableModel.getValueAt(row, 4).toString();
                 cmbStatus.setSelectedItem(status);
 
@@ -91,6 +95,7 @@ public class AdminGUI extends JFrame {
 
         btnSimpan.addActionListener(e -> prosesSimpan());
         btnUpdate.addActionListener(e -> prosesUpdate());
+        btnHapus.addActionListener(e -> prosesHapus());
         btnClear.addActionListener(e -> clearForm());
 
         btnLogout.addActionListener(e -> {
@@ -99,6 +104,29 @@ public class AdminGUI extends JFrame {
         });
 
         refreshTable();
+    }
+
+    private void prosesHapus() {
+        String npwp = txtNpwp.getText();
+        
+        if(npwp.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Pilih data yang akan dihapus dari tabel terlebih dahulu!");
+            return;
+        }
+
+        int konfirmasi = JOptionPane.showConfirmDialog(this, 
+            "Yakin ingin menghapus data dengan NPWP: " + npwp + "?", 
+            "Konfirmasi Hapus", JOptionPane.YES_NO_OPTION);
+
+        if (konfirmasi == JOptionPane.YES_OPTION) {
+            if (service.deleteData(npwp)) {
+                JOptionPane.showMessageDialog(this, "Data berhasil dihapus!");
+                refreshTable();
+                clearForm();
+            } else {
+                JOptionPane.showMessageDialog(this, "Gagal menghapus data.");
+            }
+        }
     }
 
     private void prosesSimpan() {
@@ -131,7 +159,7 @@ public class AdminGUI extends JFrame {
             String nama = txtNama.getText();
             double penghasilan = Double.parseDouble(txtPenghasilan.getText());
             double pajak = service.hitungPajak(penghasilan);
-            String status = cmbStatus.getSelectedItem().toString(); 
+            String status = cmbStatus.getSelectedItem().toString();
 
             WajibPajak wp = new WajibPajak(npwp, nama, penghasilan, pajak, status);
 
@@ -156,7 +184,7 @@ public class AdminGUI extends JFrame {
                 wp.getNama(),
                 String.format("Rp %,.0f", wp.getPenghasilan()),
                 String.format("Rp %,.0f", wp.getPajak()),
-                wp.getStatus() 
+                wp.getStatus()
             };
             tableModel.addRow(row);
         }

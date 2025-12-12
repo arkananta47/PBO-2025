@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=AdminGUI
+comment1.params=
+comment1.target=AdminGUI()
+comment2.params=e
+comment2.target=void\ mouseClicked(java.awt.event.MouseEvent)
+comment3.params=
+comment3.target=void\ prosesHapus()
+comment4.params=
+comment4.target=void\ prosesSimpan()
+comment5.params=
+comment5.target=void\ prosesUpdate()
+comment6.params=
+comment6.target=void\ refreshTable()
+comment7.params=
+comment7.target=void\ clearForm()
+numComments=8

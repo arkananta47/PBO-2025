@@ -26,7 +26,7 @@ public class TaxService {
             pstmt.setString(2, wp.getNama());
             pstmt.setDouble(3, wp.getPenghasilan());
             pstmt.setDouble(4, wp.getPajak());
-            pstmt.setString(5, wp.getStatus()); 
+            pstmt.setString(5, wp.getStatus());
             
             pstmt.executeUpdate();
             return true;
@@ -45,11 +45,27 @@ public class TaxService {
             pstmt.setString(1, wp.getNama());
             pstmt.setDouble(2, wp.getPenghasilan());
             pstmt.setDouble(3, wp.getPajak());
-            pstmt.setString(4, wp.getStatus()); 
+            pstmt.setString(4, wp.getStatus());
             pstmt.setString(5, wp.getNpwp());
             
             int row = pstmt.executeUpdate();
             return row > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deleteData(String npwp) {
+        String sql = "DELETE FROM wajib_pajak WHERE npwp=?";
+        
+        try (Connection conn = DBConnection.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setString(1, npwp);
+            
+            int rowAffected = pstmt.executeUpdate();
+            return rowAffected > 0;
         } catch (SQLException e) {
             e.printStackTrace();
             return false;

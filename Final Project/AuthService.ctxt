@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.target=AuthService
-comment1.params=user\ pass
-comment1.target=java.lang.String\ checkLogin(java.lang.String,\ java.lang.String)
-numComments=2
